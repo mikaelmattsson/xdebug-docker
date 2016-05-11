@@ -1,0 +1,14 @@
+{
+    "name": "mikselmattsson/xdebug-docker-demo",
+    "authors": [
+        {
+            "name": "Mikael Mattsson",
+            "email": "mikael.p.mattsson@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "XdebugDockerDemo\\": "src"
+        }
+    }
+}
