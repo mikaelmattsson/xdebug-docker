@@ -3,17 +3,14 @@ services:
   nginx:
     image: nginx
     ports:
-      - 80:80
+      - 8078:80
     volumes:
       - ./docker/nginx/conf.d:/etc/nginx/conf.d
       - ./:/var/www/html/
+    links:
+      - php
   php:
-    privileged: true
     build: ./docker/php
-#    ports:
-#      - 9001:9000
     volumes:
       - ./:/var/www/html/
       - ./var/log/php:/var/log/
-    #environment:
-      #PHP_IDE_CONFIG: "serverName=localhost"
