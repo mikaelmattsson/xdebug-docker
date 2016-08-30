@@ -1,12 +1,10 @@
-# Example xdebug with docker (NOT WORKING)
+# Example xdebug with docker
 
-    docker exec -it xdebugdocker_php_1 php /var/www/html/public/index.php
+    docker exec xdebugdocker_php_1 php /var/www/html/public/index.php
+    # or
+    docker-compose exec php php /var/www/html/public/index.php
 
-    docker exec -i xdebugdocker_php_1 /sbin/ip route|awk '/default/ { print $3 }'
+Run this command on your mac first. Do this once and you are set up for life.
 
-## Mac
     sudo ifconfig lo0 alias 172.16.123.1
 
-## Linux
-    #http://stackoverflow.com/questions/31324981/how-to-access-host-port-from-docker-container
-    iptables -A INPUT -i docker0 -j ACCEPT
